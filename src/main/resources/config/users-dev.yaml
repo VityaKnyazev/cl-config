@@ -1,0 +1,24 @@
+spring:
+#Spring Security settings for username and password client base authentication
+   security:
+      client-authentication:
+         username: ConnectionDevClient
+         password: connectionDevClient
+         
+server:
+   port: 8083
+
+connection:
+   db:
+      driverClassName: org.postgresql.Driver
+      jdbcUrl: jdbc:postgresql://localhost:5433/users?charSet=utf-8
+      username: security
+      password: security
+      maxPoolSize: 3
+      connectionTimeout: 3000
+   hibernate:
+      schema: none
+      sessionContext: thread
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      showSql: true
+      transactionIsolationValue: 2
