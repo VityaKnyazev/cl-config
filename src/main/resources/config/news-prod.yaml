@@ -13,6 +13,12 @@ spring:
                      username: ConnectionProdClient
                      password: connectionProdClient
 
+#Redis config settings  
+   data:
+      redis:
+         host: redis
+         port: 6379
+   
 #Spring Security settings for token and registration and authentication url's
    security:
       token:
@@ -30,8 +36,8 @@ aspect:
 # Settings for cache: enable: true | false, type: redis | custom 
 # Also settings for custom caching: algorithm: lru | lfu and cache size
    cache:
-      enable: false
-      type: custom
+      enable: true
+      type: redis
       custom:
          algorithm: lru
          size: 10

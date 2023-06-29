@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  app-config:
+     build: ./
+     ports:
+        - 8090:8090
+     networks:
+     - custom-app-network
+  
+networks:
+   custom-app-network:
+      driver: bridge
